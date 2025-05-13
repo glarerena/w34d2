@@ -1,0 +1,32 @@
+Logger System 
+
+
+
+This is a simple Python logger that can log to the console or a file. It uses two design patterns: Strategy and Bridge.
+
+Design Patterns Used
+
+Strategy: Each log method (console, file) is a separate class. You can switch them easily.
+Bridge: The `Logger` class connects to any log strategy. It doesn’t care how logging is done.
+
+SOLID Principles
+
+S: Each class does one thing.
+O: You can add new log types without changing old code.
+L: You can swap any log class, and it still works.
+I: Only one simple method in the interface.
+D: Logger uses the interface, not a specific class.
+
+Trade-offs
+
+Simple, not many features like log levels.
+Doesn’t support retries or error handling for file/db issues.
+
+Extensibility
+
+Easy to add more: just make a new log class.
+You can later add timestamps, log levels, or database logging.
+
+Summary
+
+This logger is basic, flexible, and good for growing into a full logging system later.
